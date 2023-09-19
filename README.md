@@ -1,6 +1,11 @@
 # Project 2
 
 ## Description
+
+## Sources
+
+All images used were found at https://unsplash.com/
+
 Use Node.js and Express.js to create a RESTful API.
 
 Use Handlebars.js as the templating engine.
