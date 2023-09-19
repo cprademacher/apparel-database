@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS project2_db;
+DROP DATABASE IF EXISTS clothing;
 
-CREATE DATABASE project2_db;
+CREATE DATABASE clothing;
