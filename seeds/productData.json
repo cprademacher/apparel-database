@@ -158,5 +158,45 @@
         "stock": 19,
         "category_id": 4,
         "user_id": 5
+    },
+    {
+        "product_name": "bluehats", 
+        "price": 12.99, 
+        "URL": "a",
+        "stock": 19,
+        "category_id": 5,
+        "user_id": 5
+    },
+    {
+        "product_name": "colorshat", 
+        "price": 13.99, 
+        "URL": "a",
+        "stock": 19,
+        "category_id": 5,
+        "user_id": 5
+    },
+    {
+        "product_name": "greyhats", 
+        "price": 14.99, 
+        "URL": "a",
+        "stock": 19,
+        "category_id": 5,
+        "user_id": 5
+    },
+    {
+        "product_name": "lahats", 
+        "price": 15.99, 
+        "URL": "a",
+        "stock": 19,
+        "category_id": 5,
+        "user_id": 5
+    },
+    {
+        "product_name": "mjhats", 
+        "price": 16.99, 
+        "URL": "a",
+        "stock": 19,
+        "category_id": 5,
+        "user_id": 5
     }
 ]
