@@ -28,11 +28,8 @@ router.get("/:id", async (req, res) => {
         ],
       },
     });
-    // console.log(categoryData);
-    const products = categoryData.map((product) =>
-      product.get({ plain: true })
-    );
-    console.log(products);
+
+    const { products } = categoryData.get({ plain: true });
 
     if (!categoryData) {
       res.status(404).json({ message: "Category with that id not found." });
@@ -43,9 +40,9 @@ router.get("/:id", async (req, res) => {
         logged_in: req.session.logged_in,
         isProduct,
       });
-      res.status(200).json(products);
     }
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
