@@ -12,7 +12,7 @@
     <nav>
         <a href="/">Home</a>
         <a href="/dashboard">Dashboard</a>
-        {{#if loggedIn}}
+        {{#if logged_in}}
           <button id="logout" class="btn-no-style">Logout</button>
         {{else}}
           <a href="/login">Login</a>
@@ -25,5 +25,8 @@
     <main class="container container-fluid mt-5">
         {{{body}}}
     </main>
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 </html>
