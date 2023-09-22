@@ -3,13 +3,16 @@ const { User, Category, Product, Tag } = require("../models");
 const withAuth = require("../utils/auth.js");
 
 router.get("/", withAuth, async (req, res) => {
+  const isProduct = true;
+
   try {
-    const postData = await Category.findAll(req.body);
-    const posts = postData.map((post) => post.get({ plain: true }));
-    console.log(posts);
+    const categoryData = await Category.findAll(req.body);
+    const categories = categoryData.map((category) => category.get({ plain: true }));
+    console.log(categories, isProduct);
     res.render("homepage", {
-      posts,
-      loggedIn: req.session.loggedIn,
+      categories,
+      logged_in: req.session.logged_in,
+      isProduct,
     });
   } catch (err) {
     console.log(err);
@@ -18,7 +21,7 @@ router.get("/", withAuth, async (req, res) => {
 });
 
 router.get("/login", (req, res) => {
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     res.redirect("/");
     return;
   }
