@@ -1,206 +1,4 @@
 [
-<<<<<<< HEAD
-    {
-        "product_name": "catshirt", 
-        "price": 44.99, 
-        "URL": "a",
-        "stock": 10,
-        "category_id": 1,
-        "user_id": 2
-    },
-    {
-        "product_name": "colorsshirt", 
-        "price": 39.99, 
-        "URL": "a",
-        "stock": 15,
-        "category_id": 1,
-        "user_id": 1
-    },
-    {
-        "product_name": "dressshirt", 
-        "price": 49.99, 
-        "URL": "a",
-        "stock": 8,
-        "category_id": 1,
-        "user_id": 3
-    },
-    {
-        "product_name": "redshirt", 
-        "price": 19.99, 
-        "URL": "a",
-        "stock": 12,
-        "category_id": 1,
-        "user_id": 4
-    },
-    {
-        "product_name": "turtleshirt", 
-        "price": 25.99, 
-        "URL": "a",
-        "stock": 11,
-        "category_id": 1,
-        "user_id": 5
-    },
-    {
-        "product_name": "blackpants", 
-        "price": 38.99, 
-        "URL": "a",
-        "stock": 13,
-        "category_id": 2,
-        "user_id": 5
-    },
-    {
-        "product_name": "blackwhitepants", 
-        "price": 25.99, 
-        "URL": "a",
-        "stock": 15,
-        "category_id": 2,
-        "user_id": 5
-    },
-    {
-        "product_name": "cargopants", 
-        "price": 25.99, 
-        "URL": "a",
-        "stock": 14,
-        "category_id": 2,
-        "user_id": 5
-    },
-    {
-        "product_name": "greypants", 
-        "price": 25.99, 
-        "URL": "a",
-        "stock": 20,
-        "category_id": 2,
-        "user_id": 5
-    },
-    {
-        "product_name": "lvpants", 
-        "price": 25.99, 
-        "URL": "a",
-        "stock": 35,
-        "category_id": 2,
-        "user_id": 5
-    },
-    {
-        "product_name": "blackgreyshoes", 
-        "price": 25.99, 
-        "URL": "a",
-        "stock": 22,
-        "category_id": 3,
-        "user_id": 5
-    },
-    {
-        "product_name": "blueshoes", 
-        "price": 25.99, 
-        "URL": "a",
-        "stock": 54,
-        "category_id": 3,
-        "user_id": 5
-    },
-    {
-        "product_name": "greenshoes", 
-        "price": 25.99, 
-        "URL": "",
-        "stock": 15,
-        "category_id": 3,
-        "user_id": 5
-    },
-    {
-        "product_name": "redshoes", 
-        "price": 25.99, 
-        "URL": "a",
-        "stock": 22,
-        "category_id": 3,
-        "user_id": 5
-    },
-    {
-        "product_name": "whiteshoes", 
-        "price": 25.99, 
-        "URL": "a",
-        "stock": 25,
-        "category_id": 3,
-        "user_id": 5
-    },
-    {
-        "product_name": "blackshorts", 
-        "price": 25.99, 
-        "URL": "a",
-        "stock": 14,
-        "category_id": 4,
-        "user_id": 5
-    },
-    {
-        "product_name": "blueshorts", 
-        "price": 25.99, 
-        "URL": "a",
-        "stock": 42,
-        "category_id": 4,
-        "user_id": 5
-    },
-    {
-        "product_name": "jeanshorts", 
-        "price": 75.99, 
-        "URL": "a",
-        "stock": 32,
-        "category_id": 4,
-        "user_id": 5
-    },
-    {
-        "product_name": "nikeshorts", 
-        "price": 28.99, 
-        "URL": "a",
-        "stock": 18,
-        "category_id": 4,
-        "user_id": 5
-    },
-    {
-        "product_name": "whiteshorts", 
-        "price": 25.99, 
-        "URL": "a",
-        "stock": 19,
-        "category_id": 4,
-        "user_id": 5
-    },
-    {
-        "product_name": "bluehats", 
-        "price": 12.99, 
-        "URL": "a",
-        "stock": 19,
-        "category_id": 5,
-        "user_id": 5
-    },
-    {
-        "product_name": "colorshat", 
-        "price": 13.99, 
-        "URL": "a",
-        "stock": 19,
-        "category_id": 5,
-        "user_id": 5
-    },
-    {
-        "product_name": "greyhats", 
-        "price": 14.99, 
-        "URL": "a",
-        "stock": 19,
-        "category_id": 5,
-        "user_id": 5
-    },
-    {
-        "product_name": "lahats", 
-        "price": 15.99, 
-        "URL": "a",
-        "stock": 19,
-        "category_id": 5,
-        "user_id": 5
-    },
-    {
-        "product_name": "mjhats", 
-        "price": 16.99, 
-        "URL": "a",
-        "stock": 19,
-        "category_id": 5,
-        "user_id": 5
-    }
-=======
   {
     "product_name": "catshirt",
     "price": 44.99,
@@ -360,6 +158,45 @@
     "stock": 19,
     "category_id": 4,
     "user_id": 5
-  }
->>>>>>> ca3f52c7f2f7782b103385ce0a706a9fec6bc67f
+  },
+  {
+    "product_name": "bluehats", 
+    "price": 12.99, 
+    "url": "a",
+    "stock": 19,
+    "category_id": 5,
+    "user_id": 5
+},
+{
+    "product_name": "colorshat", 
+    "price": 13.99, 
+    "url": "a",
+    "stock": 19,
+    "category_id": 5,
+    "user_id": 5
+},
+{
+    "product_name": "greyhats", 
+    "price": 14.99, 
+    "url": "a",
+    "stock": 19,
+    "category_id": 5,
+    "user_id": 5
+},
+{
+    "product_name": "lahats", 
+    "price": 15.99, 
+    "url": "a",
+    "stock": 19,
+    "category_id": 5,
+    "user_id": 5
+},
+{
+    "product_name": "mjhats", 
+    "price": 16.99, 
+    "url": "a",
+    "stock": 19,
+    "category_id": 5,
+    "user_id": 5
+}    
 ]
