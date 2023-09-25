@@ -8,7 +8,7 @@ app.use(express.json());
 // GET category by ID
 router.get("/:id", async (req, res) => {
   const isProduct = true;
-
+// should find a way to add the product tag
   try {
     const categoryData = await Category.findByPk(req.params.id, {
       include: [
@@ -30,6 +30,8 @@ router.get("/:id", async (req, res) => {
     });
 
     const { products } = categoryData.get({ plain: true });
+
+    console.log(products);
 
     if (!categoryData) {
       res.status(404).json({ message: "Category with that id not found." });
