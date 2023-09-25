@@ -1,14 +1,18 @@
 [
     {
+        "id": 1,
         "tag_name": "Summer Collection"
     },
     {
+        "id": 2,
        "tag_name": "Fall Collection"
     },
     {
+        "id": 3,
         "tag_name": "Spring Collection"
     },
     {
+        "id": 4,
         "tag_name": "Winter Collection"
     }
 ]
