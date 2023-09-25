@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "product_name": "catshirt",
     "price": 44.99,
     "url": "/assets/shirt-cat.jpg",
@@ -8,6 +9,7 @@
     "user_id": 2
   },
   {
+    "id": 2,
     "product_name": "colorsshirt",
     "price": 39.99,
     "url": "/assets/shirt-colors.jpg",
@@ -16,6 +18,7 @@
     "user_id": 1
   },
   {
+    "id": 3,
     "product_name": "dressshirt",
     "price": 49.99,
     "url": "/assets/shirt-dress.jpg",
@@ -24,6 +27,7 @@
     "user_id": 3
   },
   {
+    "id": 4,
     "product_name": "redshirt",
     "price": 19.99,
     "url": "/assets/shirt-red.jpg",
@@ -32,6 +36,7 @@
     "user_id": 4
   },
   {
+    "id": 5,
     "product_name": "turtleshirt",
     "price": 25.99,
     "url": "/assets/shirt-turtle.jpg",
@@ -40,6 +45,7 @@
     "user_id": 5
   },
   {
+    "id": 6,
     "product_name": "blackpants",
     "price": 38.99,
     "url": "/assets/pants-black.jpg",
@@ -48,6 +54,7 @@
     "user_id": 5
   },
   {
+    "id": 7,
     "product_name": "blackwhitepants",
     "price": 25.99,
     "url": "/assets/pants-blackwhite.jpg",
@@ -56,6 +63,7 @@
     "user_id": 5
   },
   {
+    "id": 8,
     "product_name": "cargopants",
     "price": 25.99,
     "url": "/assets/pants-cargo.jpg",
@@ -64,6 +72,7 @@
     "user_id": 5
   },
   {
+    "id": 9,
     "product_name": "greypants",
     "price": 25.99,
     "url": "/assets/pants-grey.jpg",
@@ -72,6 +81,7 @@
     "user_id": 5
   },
   {
+    "id": 10,
     "product_name": "lvpants",
     "price": 25.99,
     "url": "/assets/pants-lv.jpg",
@@ -80,6 +90,7 @@
     "user_id": 5
   },
   {
+    "id": 11,
     "product_name": "blackgreyshoes",
     "price": 25.99,
     "url": "/assets/shoes-blackgrey.jpg",
@@ -88,6 +99,7 @@
     "user_id": 5
   },
   {
+    "id": 12,
     "product_name": "blueshoes",
     "price": 25.99,
     "url": "/assets/shoes-blue.jpg",
@@ -96,6 +108,7 @@
     "user_id": 5
   },
   {
+    "id": 13,
     "product_name": "greenshoes",
     "price": 25.99,
     "url": "/assets/shoes-green.jpg",
@@ -104,6 +117,7 @@
     "user_id": 5
   },
   {
+    "id": 14,
     "product_name": "redshoes",
     "price": 25.99,
     "url": "/assets/shoes-red.jpg",
@@ -112,6 +126,7 @@
     "user_id": 5
   },
   {
+    "id": 15,
     "product_name": "whiteshoes",
     "price": 25.99,
     "url": "/assets/shoes-white.jpg",
@@ -120,6 +135,7 @@
     "user_id": 5
   },
   {
+    "id": 16,
     "product_name": "blackshorts",
     "price": 25.99,
     "url": "/assets/shorts-black.jpg",
@@ -128,6 +144,7 @@
     "user_id": 5
   },
   {
+    "id": 17,
     "product_name": "blueshorts",
     "price": 25.99,
     "url": "/assets/shorts-blue.jpg",
@@ -136,6 +153,7 @@
     "user_id": 5
   },
   {
+    "id": 18,
     "product_name": "jeanshorts",
     "price": 75.99,
     "url": "/assets/shorts-jean.jpg",
@@ -144,6 +162,7 @@
     "user_id": 5
   },
   {
+    "id": 19,
     "product_name": "nikeshorts",
     "price": 28.99,
     "url": "/assets/shorts-nike.jpg",
@@ -152,6 +171,7 @@
     "user_id": 5
   },
   {
+    "id": 20,
     "product_name": "whiteshorts",
     "price": 25.99,
     "url": "/assets/shorts-white.jpg",
@@ -160,6 +180,7 @@
     "user_id": 5
   },
   {
+    "id": 21,
     "product_name": "bluehats",
     "price": 15.99,
     "url": "/assets/hats-blue.jpg",
@@ -168,6 +189,7 @@
     "user_id": 1
   },
   {
+    "id": 22,
     "product_name": "colorhats",
     "price": 15.99,
     "url": "/assets/hats-colors.jpg",
@@ -176,6 +198,7 @@
     "user_id": 1
   },
   {
+    "id": 23,
     "product_name": "greyhats",
     "price": 15.99,
     "url": "/assets/hats-colors.jpg",
@@ -184,6 +207,7 @@
     "user_id": 3
   },
   {
+    "id": 24,
     "product_name": "lahats",
     "price": 15.99,
     "url": "/assets/hats-la.jpg",
@@ -192,6 +216,7 @@
     "user_id": 4
   },
   {
+    "id": 25,
     "product_name": "mjhats",
     "price": 15.99,
     "url": "/assets/hats-mj.jpg",
