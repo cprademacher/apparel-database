@@ -6,28 +6,20 @@ const app = express();
 app.use(express.json());
 
 
-// GET all tags
-router.get("/", async (req, res) => {
-  try {
-    const tagData = await Tag.findAll();
-    res.json(tagData);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json(err);
-  }
-});
-
 // GET tag by ID
 router.get("/:id", async (req, res) => {
-  // find a single tag by its `id`
-  // be sure to include its associated Product data
   try {
-    const tagData = await Tag.findByPk(req.params.id);
-    if (!tagData) {
-      res.status(404).json({ message: "No record with this ID" });
-    } else {
-      res.status(201).json(tagData);
-    }
+    const tagData = await Tag.findByPk(req.params.id, {
+      include: [{ model: Product }
+      ],});
+
+      const collection = tagData.get({ plain: true });
+      console.log(collection, "here is the console.log");
+      res.render("collection-products", {
+        collection,
+        logged_in: req.session.logged_in,
+      });
+    
   } catch (err) {
     res.status(500).json(err);
   }

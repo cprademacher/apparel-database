@@ -1,0 +1,13 @@
+<section>
+  <h2>{{collection.tag_name}}</h2>
+  {{#each collection.products as |product|}}
+ <section class="card">
+    <header>{{product_name}}</header>
+  <div class="card-body">
+  <img src="{{url}}" alt="{{product_name}}">
+    <p>Price: {{price}}</p>
+    <p>Stock: {{stock}}</p>
+  </div>
+</section>
+  {{/each}}
+</section>
