@@ -5,6 +5,7 @@ const path = require("path");
 const exphbs = require("express-handlebars");
 const helpers = require('./utils/helpers');
 
+
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
@@ -31,6 +32,7 @@ const sess = {
 app.use(session(sess));
 
 app.engine("handlebars", hbs.engine);
+app.set("views",path.join(__dirname,"views"))
 app.set("view engine", "handlebars");
 
 app.use(express.json());
