@@ -1,0 +1,13 @@
+<section class="card">
+  <button class="update-button">Update</button>
+  <button class="delete-button">Delete</button>
+  <header>{{product.product_name}}</header>
+
+  <div class="card-body">
+    <img src="{{product.url}}" alt="{{product.product_name}}" />
+    <p>Price: ${{product.price}}.99</p>
+    <p>Stock: {{product.stock}}</p>
+  </div>
+</section>
+<script src="/js/update.js"></script>
+<script src="/js/delete.js"></script>

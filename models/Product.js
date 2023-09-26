@@ -27,10 +27,7 @@ Product.init(
     },
     url: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        isUrl: true,
-      },
+      allowNull: true,
     },
     stock: {
       type: DataTypes.INTEGER,

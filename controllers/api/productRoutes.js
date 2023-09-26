@@ -5,33 +5,26 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 
-// get all products
-router.get("/", async (req, res) => {
-  try {
-    const productData = await Product.findAll();
-    res.json(productData);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json(err);
-  }
-});
-
 // get one product
 router.get("/:id", async (req, res) => {
   try {
-    const productData = await Product.findByPk(req.params.id);
-    if (!productData) {
-      res.status(404).json({ message: "No record with this ID" });
-    } else {
-      res.status(201).json(productData);
-    }
+    const productData = await Product.findByPk(req.params.id, {
+      include: [{ model: Tag, attributes: ["tag_name"] }],
+    });
+
+    const product = productData.get({ plain: true });
+    console.log(product, "here is the console.log");
+    res.render("product", {
+      product,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 // create new product
-router.post("/", async (req, res) => {
+router.post("/new-product", async (req, res) => {
   try {
     const { product_name, price, url, stock, category_id } = req.body;
 
