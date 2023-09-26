@@ -1,6 +1,12 @@
-<section class="card" >
-  <button class="update-button" category-id="{{product.category_id}}">Update</button>
-  <button class="delete-button" category-id="{{product.category_id}}">Delete</button>
+<section class="card">
+  <button
+    class="update-button"
+    category-id="{{product.category_id}}"
+  >Update</button>
+  <button
+    class="delete-button"
+    category-id="{{product.category_id}}"
+  >Delete</button>
   <header>{{product.product_name}}</header>
 
   <div class="card-body">
@@ -9,14 +15,22 @@
     <p>Stock: {{product.stock}}</p>
   </div>
 </section>
-<form>
+<form enctype="multipart/form-data">
   <div class="update-product-form" style="display: none;">
-        <input type="text" class="update-product-name" value="{{product.product_name}}">
-        $<input type="text" class="update-product-price" value="{{product.price}}">.99
-        <input type="text" class="update-product-stock" value="{{product.stock}}">
-        {{!-- <input type="text" class="new-product-url" placeholder="Product Photo URL"> --}}
-        <button type="button" class="update-product-button">Submit</button>
-    </div>
+    <input
+      type="text"
+      class="update-product-name"
+      value="{{product.product_name}}"
+    />
+    $<input
+      type="text"
+      class="update-product-price"
+      value="{{product.price}}"
+    />.99
+    <input type="text" class="update-product-stock" value="{{product.stock}}" />
+    <input type="file" id="update-product-url" name="mypic" accept="image/*" />
+    <button type="submit" class="update-product-button">Submit</button>
+  </div>
 </form>
 <script src="/js/update.js"></script>
 <script src="/js/delete.js"></script>
