@@ -10,13 +10,13 @@ function showForm(categoryId) {
   const productForm = document.querySelector(".new-product-form");
 
   productForm.style.display = "block";
-
+  const fileInput = document.getElementById("new-product-url");
   const productSubmitButton = document.querySelector(".new-product-button");
   productSubmitButton.addEventListener("click", () => {
     const newProductName = document.querySelector(".new-product-name").value;
     const newProductStock = document.querySelector(".new-product-stock").value;
     const newProductPrice = document.querySelector(".new-product-price").value;
-    const newProductUrl = document.querySelector(".new-product-url").value;
+    const newProductUrl = fileInput.files[0];
     submitProduct(
       categoryId,
       newProductName,
@@ -45,7 +45,7 @@ function submitProduct(
         product_name: newProductName,
         price: newProductPrice,
         stock: newProductStock,
-        url: newProductUrl,
+        url: "/assets/" + newProductUrl.name,
       }),
     })
       .then((response) => {
