@@ -4,6 +4,20 @@ const sequelize = require("../../config/connection");
 const express = require("express");
 const app = express();
 app.use(express.json());
+const multer = require("multer");
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    console.log("storage file", file);
+    cb(null, "./public/assets/");
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + ".jpg");
+  },
+});
+
+const upload = multer({ storage: storage })
+
 
 // get one product
 router.get("/:id", async (req, res) => {
@@ -24,7 +38,7 @@ router.get("/:id", async (req, res) => {
 });
 
 // create new product
-router.post("/new-product", async (req, res) => {
+router.post("/new-product", upload.single("mypic"), async (req, res) => {
   try {
     const { product_name, price, url, stock, category_id } = req.body;
 
@@ -47,7 +61,8 @@ router.post("/new-product", async (req, res) => {
 });
 
 //   UPDATE product by ID
-router.put("/:id", async (req, res) => {
+router.put("/:id", upload.single("mypic"), async (req, res) => {
+  console.log("yguyvbvuhgvbugyvgh", req.files, "this is req.file");
   // update a tag's name by its `id` value
   try {
     const updatedProduct = await Product.update(
@@ -55,6 +70,7 @@ router.put("/:id", async (req, res) => {
         product_name: req.body.product_name,
         stock: req.body.stock,
         price: req.body.price,
+        url: req.body.url,
       },
       {
         where: {
@@ -62,7 +78,8 @@ router.put("/:id", async (req, res) => {
         },
       }
     );
-
+    console.log(req.body, "this is req.body");
+    console.log(updatedProduct, "this is updatedProduct");
     res.status(200).json({ message: "Category updated successfully." });
   } catch (err) {
     res.status(500).json(err);
