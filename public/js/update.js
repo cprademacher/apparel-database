@@ -1,24 +1,51 @@
 const updateProductButton = document.querySelector(".update-button");
-updateProductButton.addEventListener("click", () => {
-  const postTitle = document.querySelector("#title").value;
-  const postText = document.querySelector("#content").value;
-  updatePost(postTitle, postText);
-});
-function updatePost(postTitle, postText) {
+updateProductButton.addEventListener("click", (event) => {
+  const categoryId = event.target.getAttribute("category-id");
   const path = window.location.pathname;
   const pathSegments = path.split("/");
-  const oldTitle = decodeURIComponent(pathSegments[2]);
-  if (postTitle && postText && oldTitle) {
-  console.log(postTitle, postText);
-  fetch("/dashboard", {
+  const productId = decodeURIComponent(pathSegments[3]);
+  showForm(categoryId, productId);
+});
+
+function showForm(categoryId, productId) {
+  const productForm = document.querySelector(".update-product-form");
+
+  productForm.style.display = "block";
+
+  const productSubmitButton = document.querySelector(".update-product-button");
+  productSubmitButton.addEventListener("click", () => {
+    const updatedProductName = document.querySelector(".update-product-name").value;
+    const updatedProductStock = document.querySelector(".update-product-stock").value;
+    const updatedProductPrice = document.querySelector(".update-product-price").value;
+    // const newProductUrl = document.querySelector(".new-product-url").value;
+    updateProduct(
+      productId,
+      categoryId,
+      updatedProductName,
+      updatedProductStock,
+      updatedProductPrice,
+      // newProductUrl
+    );
+  });
+}
+
+function updateProduct(productId, categoryId,
+  updatedProductName,
+  updatedProductStock,
+  updatedProductPrice,) {
+  if (productId && categoryId &&
+    updatedProductName &&
+    updatedProductStock &&
+    updatedProductPrice) {
+  fetch(`/api/products/${productId}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      oldTitle: oldTitle,
-      content: postText,
-      title: postTitle,
+      product_name: updatedProductName,
+      stock: updatedProductStock,
+      price: updatedProductPrice,
     }),
   })
     .then((response) => {
@@ -33,16 +60,17 @@ function updatePost(postTitle, postText) {
         throw new Error("Failed to update post");
       }
     })
-    .then((updatedPost) => {
-      console.log("New post:", updatedPost);
-      window.location.assign(`/dashboard`);
+    .then((updatedProduct) => {
+      console.log("New post:", updatedProduct);
+      window.location.assign(`/api/category/${categoryId}`);
     })
     .catch((error) => {
       console.error(error);
     });
-  }else {
-    const updateMessage = document.querySelector("#message");
-    console.log(updateMessage);
-    updateMessage.style.display = "block";
   }
+  // else {
+  //   const updateMessage = document.querySelector("#message");
+  //   console.log(updateMessage);
+  //   updateMessage.style.display = "block";
+  // }
 }

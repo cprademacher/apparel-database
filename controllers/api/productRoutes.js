@@ -50,15 +50,19 @@ router.post("/new-product", async (req, res) => {
 router.put("/:id", async (req, res) => {
   // update a tag's name by its `id` value
   try {
-    const tagData = await Tag.update(req.body, {
-      where: {
-        id: req.params.id,
+    const updatedProduct = await Product.update(
+      {
+        product_name: req.body.product_name,
+        stock: req.body.stock,
+        price: req.body.price,
       },
-    });
-    if (!tagData[0]) {
-      res.status(404).json({ message: "Category with that id not found." });
-      return;
-    }
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+
     res.status(200).json({ message: "Category updated successfully." });
   } catch (err) {
     res.status(500).json(err);

@@ -1,3 +1,4 @@
+
 .card img {
     width: 25%;
     display: block;
@@ -8,11 +9,16 @@ p {
     text-align: center;
 }
 
+.header {
+    background-color: black;
+}
+
 header {
     text-align: center;
     font-weight: bolder;
 
 }
+
 
 h1,h2,h3{
     text-align: center;
@@ -25,8 +31,18 @@ html {
   }
 /*This should remove the margin in all browsers*/
 body {
+    /* Set the background image */
+    background-image: url('/assets/ut-bros_720.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    color: #333;
     margin: 0;
-  }
+    padding: 0;
+}
+
 
 main {
     display: block;
@@ -38,17 +54,17 @@ img {
 nav {
     margin: 0;
     overflow: hidden;
-    background-color: #09a53d;
-    display: block;
+    display: flex;
+    justify-content: flex-start;
     text-align: center;
-    padding: 14px 16px;
+    padding: 5px ;
   }
-a {
-    color:black;
+  nav a {
+    color:rgb(208, 57, 57);
     text-decoration: none;
 }
-a:hover {
-    background-color: #f6ff00;
+nav a:hover {
+    color: #39a1c7;
   }
 /*This should remove the inner border and padding in Firefox*/
   button::-moz-focus-inner,

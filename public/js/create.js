@@ -1,8 +1,8 @@
 const addProductButton = document.querySelector(".add-button");
 addProductButton.addEventListener("click", () => {
-  const categoryId = document
-    .querySelector(".card")
-    .getAttribute("data-product-id");
+  const path = window.location.pathname;
+  const pathSegments = path.split("/");
+  const categoryId = decodeURIComponent(pathSegments[3]);
   showForm(categoryId);
 });
 
