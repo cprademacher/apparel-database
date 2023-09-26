@@ -1,10 +1,10 @@
 <button class="add-button">Add Product</button>
-<form>
+<form enctype="multipart/form-data">
     <div class="new-product-form" style="display: none;">
         <input type="text" class="new-product-name" placeholder="Product Name">
         <input type="text" class="new-product-price" placeholder="Product Price">
         <input type="text" class="new-product-stock" placeholder="Product Stock">
-        <input type="text" class="new-product-url" placeholder="Product Photo URL">
+        <input type="file" id="new-product-url" name="mypic" accept="image/*">
         <button type="button" class="new-product-button">Submit</button>
     </div>
 </form>
