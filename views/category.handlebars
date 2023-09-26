@@ -1,3 +1,4 @@
+<div class="button-and-form">
 <button class="add-button">Add Product</button>
 <form>
     <div class="new-product-form" style="display: none;">
@@ -8,7 +9,11 @@
         <button type="button" class="new-product-button">Submit</button>
     </div>
 </form>
+</div>
+
+<div class="products-container">
 {{#each products as |product|}}
 {{> product-details}}
 {{/each}}
+</div>
 <script src="/js/create.js"></script>
