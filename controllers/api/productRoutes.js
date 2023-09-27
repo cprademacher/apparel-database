@@ -5,19 +5,19 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 const multer = require("multer");
-
+// =========== Multer Middlewear ===========
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    console.log("storage file", file);
-    cb(null, "./public/assets/");
+    cb(null, "public/assets/");
   },
   filename: function (req, file, cb) {
-    cb(null, file.fieldname + ".jpg");
+    cb(null, file.originalname);
   },
 });
 
-const upload = multer({ storage: storage })
-
+const upload = multer({
+  storage: storage,
+}).single("mypic");
 
 // get one product
 router.get("/:id", async (req, res) => {
@@ -27,7 +27,6 @@ router.get("/:id", async (req, res) => {
     });
 
     const product = productData.get({ plain: true });
-    console.log(product, "here is the console.log");
     res.render("product", {
       product,
       logged_in: req.session.logged_in,
@@ -38,32 +37,39 @@ router.get("/:id", async (req, res) => {
 });
 
 // create new product
-router.post("/new-product", upload.single("mypic"), async (req, res) => {
-  try {
-    const { product_name, price, url, stock, category_id } = req.body;
+router.post("/new-product", async (req, res) => {
+  upload(req, res, async (err) => {
+    console.log(req.body.mypic);
+    try {
+      const { product_name, price, url, stock, category_id } = req.body;
 
-    if (!product_name) {
-      return res.status(400).json({ error: "Product name is required" });
+      if (!product_name) {
+        return res.status(400).json({ error: "Product name is required" });
+      }
+
+      const newProduct = await Product.create({
+        product_name,
+        price,
+        url,
+        stock,
+        category_id,
+      });
+      res.status(201).json(newProduct);
+    } catch (err) {
+      console.error(err);
+      res.status(500).json(err);
     }
-
-    const newProduct = await Product.create({
-      product_name,
-      price,
-      url,
-      stock,
-      category_id,
-    });
-    res.status(201).json(newProduct);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json(err);
-  }
+    if (err instanceof multer.MulterError) {
+      console.error(err);
+    } else if (err) {
+      console.error(err);
+    }
+  });
 });
 
 //   UPDATE product by ID
-router.put("/:id", upload.single("mypic"), async (req, res) => {
-  console.log("yguyvbvuhgvbugyvgh", req.files, "this is req.file");
-  // update a tag's name by its `id` value
+router.put("/:id", async (req, res) => {
+  upload(req, res, async (err) => {
   try {
     const updatedProduct = await Product.update(
       {
@@ -78,14 +84,17 @@ router.put("/:id", upload.single("mypic"), async (req, res) => {
         },
       }
     );
-    console.log(req.body, "this is req.body");
-    console.log(updatedProduct, "this is updatedProduct");
     res.status(200).json({ message: "Category updated successfully." });
   } catch (err) {
     res.status(500).json(err);
   }
+  if (err instanceof multer.MulterError) {
+    console.error(err);
+  } else if (err) {
+    console.error(err);
+  }
 });
-
+});
 //   DELETE product by ID
 router.delete("/:id", async (req, res) => {
   // delete one product by its `id` value
