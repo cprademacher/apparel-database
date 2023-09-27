@@ -1,12 +1,14 @@
 <section>
   <h2>{{collection.tag_name}}</h2>
   {{#each collection.products as |product|}}
- <section class="card">
-    <header>{{product_name}}</header>
-  <div class="card-body">
+ <section class="card product-card">
+    <header class="product_name">{{product_name}}</header>
+  <div class="card-body product-card-body">
   <img src="{{url}}" alt="{{product_name}}">
-    <p>Price: {{price}}</p>
-    <p>Stock: {{stock}}</p>
+   <div class="price-and-stock">
+    <p class="price">Price: {{price}}</p>
+    <p class="stock">Stock: {{stock}}</p>
+    </div>
   </div>
 </section>
   {{/each}}

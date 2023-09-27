@@ -1,11 +1,12 @@
-<section class="card">
-  <a href="api/product/{{id}}">
-    <header>{{product_name}}</header>
+<section class="card product-card" data-product-id="{{id}}">
+  <a href="/api/products/{{id}}">
+    <header class="product_name">{{product_name}}</header>
   </a>
-  <div class="card-body">
-  <img src="{{url}}" alt="{{product_name}}">
-    <p>Price: ${{price}}.99</p>
-    <p>Stock: {{stock}}</p>
+  <div class="card-body product-card-body">
+    <img src="{{url}}" alt="{{product_name}}" />
+    <div class="price-and-stock">
+      <p class="price">Price: ${{price}}.99</p>
+      <p class="stock">Stock: {{stock}}</p>
+    </div>
   </div>
-  {{!-- need to add a button for updating and deleting --}}
 </section>
