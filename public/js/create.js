@@ -16,37 +16,27 @@ function showForm(categoryId) {
     const newProductName = document.querySelector(".new-product-name").value;
     const newProductStock = document.querySelector(".new-product-stock").value;
     const newProductPrice = document.querySelector(".new-product-price").value;
-    const newProductUrl = fileInput.files[0];
-    submitProduct(
-      categoryId,
-      newProductName,
-      newProductPrice,
-      newProductStock,
-      newProductUrl
-    );
+    const newProductUrl = "/assets/" + fileInput.files[0].name;
+    const newProductImage = fileInput.files[0];
+    const formData = new FormData();
+
+    formData.append("mypic", newProductImage);
+    formData.append("product_name", newProductName);
+    formData.append("stock", newProductStock);
+    formData.append("price", newProductPrice);
+    formData.append("url", newProductUrl);
+    formData.append("category_id", categoryId);
+
+    submitProduct(categoryId, formData);
   });
 }
 
-function submitProduct(
-  categoryId,
-  newProductName,
-  newProductPrice,
-  newProductStock,
-  newProductUrl
-) {
-  if (categoryId && newProductName && newProductPrice && newProductStock) {
+function submitProduct(categoryId, formData) {
+  if (formData) {
     fetch("/api/products/new-product", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        category_id: categoryId,
-        product_name: newProductName,
-        price: newProductPrice,
-        stock: newProductStock,
-        url: "/assets/" + newProductUrl.name,
-      }),
+
+      body: formData,
     })
       .then((response) => {
         console.log(response);
