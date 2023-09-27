@@ -15,7 +15,7 @@
     <p>Stock: {{product.stock}}</p>
   </div>
 </section>
-<form enctype="multipart/form-data">
+<form action="../../{{product.id}}" method="put" enctype="multipart/form-data">
   <div class="update-product-form" style="display: none;">
     <input
       type="text"
@@ -29,7 +29,7 @@
     />.99
     <input type="text" class="update-product-stock" value="{{product.stock}}" />
     <input type="file" id="update-product-url" name="mypic" accept="image/*" />
-    <button type="submit" class="update-product-button">Submit</button>
+    <button type="button" class="update-product-button">Submit</button>
   </div>
 </form>
 <script src="/js/update.js"></script>
