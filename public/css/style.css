@@ -148,6 +148,7 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 10% auto;
+  border-radius: 6px;
 }
 
 .category-card {
@@ -161,10 +162,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 6px;
 }
 
 .category-card a {
   color: black;
+}
+
+.category-card a:hover {
+  color: rgb(208, 57, 57);
 }
 
 .category-card header {
