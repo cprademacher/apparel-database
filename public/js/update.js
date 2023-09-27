@@ -23,50 +23,27 @@ function showForm(categoryId, productId) {
     const updatedProductPrice = document.querySelector(
       ".update-product-price"
     ).value;
-    const updatedProductUrl = fileInput.files[0];
-    if (updatedProductUrl) {
-      console.log("Selected file:", updatedProductUrl);
-      updateProduct(
-        productId,
-        categoryId,
-        updatedProductName,
-        updatedProductStock,
-        updatedProductPrice,
-        updatedProductUrl
-      );
-    } else {
-      alert("Please select a file before uploading.");
-    }
+    const updatedProductUrl = "/assets/" + fileInput.files[0].name;
+    const updatedProductImage = fileInput.files[0];
+    const formData = new FormData();
+
+    formData.append("mypic", updatedProductImage);
+    formData.append("product_name", updatedProductName);
+    formData.append("stock", updatedProductStock);
+    formData.append("price", updatedProductPrice);
+    formData.append("url", updatedProductUrl);
+    formData.append("category_id", categoryId);
+    formData.append("category_id", productId);
+
+    updateProduct(productId, categoryId, formData);
   });
 }
 
-function updateProduct(
-  productId,
-  categoryId,
-  updatedProductName,
-  updatedProductStock,
-  updatedProductPrice,
-  updatedProductUrl
-) {
-  if (
-    productId &&
-    categoryId &&
-    updatedProductName &&
-    updatedProductStock &&
-    updatedProductPrice &&
-    updatedProductUrl
-  ) {
+function updateProduct(productId, categoryId, formData) {
+  if (productId && categoryId) {
     fetch(`/api/products/${productId}`, {
       method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        product_name: updatedProductName,
-        stock: updatedProductStock,
-        price: updatedProductPrice,
-        url: "/assets/" + updatedProductUrl.name,
-      }),
+      body: formData,
     })
       .then((response) => {
         console.log("updateProduct", response);
@@ -88,9 +65,4 @@ function updateProduct(
         console.error(error);
       });
   }
-  // else {
-  //   const updateMessage = document.querySelector("#message");
-  //   console.log(updateMessage);
-  //   updateMessage.style.display = "block";
-  // }
 }
