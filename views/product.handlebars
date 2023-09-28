@@ -18,20 +18,31 @@
   </div>
 </section>
 <form action="../../{{product.id}}" method="put" enctype="multipart/form-data" class="product-page-form">
-  <div class="update-product-form" style="display: none;">
+  <div class="update-product-form" id="update-product-form" style="display: none;">
+    <div>
     <input
       type="text"
       class="update-product-name"
       value="{{product.product_name}}"
     />
-    $<input
+    $
+    </div>
+    <div>
+    <input
       type="text"
       class="update-product-price"
       value="{{product.price}}"
     />.99
+    </div>
+    <div>
     <input type="text" class="update-product-stock" value="{{product.stock}}" />
+    </div>
+    <div>
     <input type="file" id="update-product-url" name="mypic" accept="image/*" />
+    </div>
+    <div>
     <button type="button" class="update-product-button">Submit</button>
+    <div>
   </div>
 </form>
 <script src="/js/update.js"></script>

@@ -57,6 +57,11 @@ main {
   display: block;
 }
 
+button {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 button:hover {
   cursor: pointer;
 }
@@ -259,7 +264,7 @@ body {
 }
 
 .new-product-form {
- text-align: center;
+  text-align: center;
 }
 
 .new-product-form button {
@@ -290,19 +295,81 @@ body {
 }
 
 .product-page button {
-  width: 70px;
-  height: 30px;
+  width: 90px;
+  height: 45px;
   margin: 5px;
+}
+
+.update-button {
+  background-color: yellow;
+}
+
+.update-product-button {
+  width: 90px;
+  height: 45px;
+  background-color: green;
+}
+
+.delete-button {
+  background-color: red;
 }
 
 .product-page-form {
   width: 50%;
   background-color: lightgray;
-  text-align: center;
   margin: 0 auto;
   padding-bottom: 5px;
 }
 
-@media screen and (max-width: 600px) {
-  
+.update-product-button {
+  margin-left: 25%;
+}
+
+#update-product-form {
+  width: 200px;
+  align-items: start;
+  margin: 0 auto;
+}
+
+.update-product-form div {
+  padding-top: 15px;
+}
+
+.update-product-form div input {
+  height: 30px;
+}
+
+@media screen and (max-width: 700px) {
+  .product-card {
+    margin: 10px;
+    height: 370px;
+    width: 300px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  .product-card img {
+    width: auto;
+    max-height: 150px;
+  }
+
+  .product_name {
+    margin-left: 0;
+  }
+
+  .product-card-body {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .update-product-form div input {
+    height: 20px;
+    width: 80%;
+  }
 }
