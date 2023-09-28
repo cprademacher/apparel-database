@@ -20,14 +20,16 @@
 <form action="../../{{product.id}}" method="put" enctype="multipart/form-data" class="product-page-form">
   <div class="update-product-form" id="update-product-form" style="display: none;">
     <div>
+    <p>Product Name</p>
     <input
       type="text"
       class="update-product-name"
       value="{{product.product_name}}"
     />
-    $
+    
     </div>
     <div>
+    <p>Price</p>
     <input
       type="text"
       class="update-product-price"
@@ -35,6 +37,7 @@
     />.99
     </div>
     <div>
+    <p>Stock</p>
     <input type="text" class="update-product-stock" value="{{product.stock}}" />
     </div>
     <div>

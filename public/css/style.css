@@ -147,8 +147,8 @@ body {
   min-width: 100vw;
 }
 
-.sign-up-form,
-.login-form {
+.sign-up,
+.login {
   background-color: gray;
   opacity: 0.8;
   width: 40%;
@@ -348,7 +348,7 @@ body {
 
 .collections-card {
   background-color: gray;
-  width: 35%;
+  width: 55%;
   height: auto;
   margin: 5px;
   padding: 10px;
