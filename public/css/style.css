@@ -206,6 +206,11 @@ body {
   margin: 10px;
 }
 
+.products-container h2 {
+  font-size: 1.8vw;
+  color: white;
+}
+
 .product-card {
   margin: 10px;
   height: 200px;
@@ -356,6 +361,8 @@ body {
 
 .collections-card h3 {
   font-size: 1.8vw;
+  color: white;
+  text-decoration: none;
 }
 
 .collections-card img {
