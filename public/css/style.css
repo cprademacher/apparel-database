@@ -339,6 +339,30 @@ body {
   height: 30px;
 }
 
+.collections-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.collections-card {
+  background-color: gray;
+  width: 35%;
+  height: auto;
+  margin: 5px;
+  padding: 10px;
+}
+
+.collections-card h3 {
+  font-size: 1.8vw;
+}
+
+.collections-card img {
+  width: 60%;
+  height: auto;
+}
+
 @media screen and (max-width: 700px) {
   .product-card {
     margin: 10px;
