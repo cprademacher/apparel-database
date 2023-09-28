@@ -56,6 +56,11 @@ body {
 main {
   display: block;
 }
+
+button:hover {
+  cursor: pointer;
+}
+
 /*Removes the border on images inside link in IE 10*/
 img {
   border-style: none;
@@ -261,4 +266,43 @@ body {
   width: 80px;
   height: 30px;
   margin: 10px;
+}
+
+.product-page {
+  background-color: lightgray;
+  width: 50%;
+  height: auto;
+  margin: 80px auto 0 auto;
+}
+
+.product-page header {
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.product-page img {
+  object-fit: fill;
+}
+
+.product-page-buttons {
+  width: 100%;
+  text-align: center;
+}
+
+.product-page button {
+  width: 70px;
+  height: 30px;
+  margin: 5px;
+}
+
+.product-page-form {
+  width: 50%;
+  background-color: lightgray;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  
 }

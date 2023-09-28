@@ -1,12 +1,14 @@
-<section class="card">
-  <button
-    class="update-button"
-    category-id="{{product.category_id}}"
-  >Update</button>
-  <button
-    class="delete-button"
-    category-id="{{product.category_id}}"
-  >Delete</button>
+<section class="card product-page">
+  <div class="product-page-buttons">
+    <button
+      class="update-button"
+      category-id="{{product.category_id}}"
+    >Update</button>
+    <button
+      class="delete-button"
+      category-id="{{product.category_id}}"
+    >Delete</button>
+  </div>
   <header>{{product.product_name}}</header>
 
   <div class="card-body">
@@ -15,7 +17,7 @@
     <p>Stock: {{product.stock}}</p>
   </div>
 </section>
-<form action="../../{{product.id}}" method="put" enctype="multipart/form-data">
+<form action="../../{{product.id}}" method="put" enctype="multipart/form-data" class="product-page-form">
   <div class="update-product-form" style="display: none;">
     <input
       type="text"
