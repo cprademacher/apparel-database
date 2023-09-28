@@ -22,17 +22,17 @@ All repo links are listed within the links under the [contributors](#contributor
 ## Screenshots
 
 Log-in: This is where you will enter your login credentials (for this assignment you can use one from the userData.json within the seeds folder).
-![Alt text](image-6.png)
+![Alt text](/public/assets/image-6.png)
 
 Once you log-in you will be brought to this page of categories where you can find what clothing item you are looking to purchase, update, or add.
-![Alt text](image-3.png)
+![Alt text](/public/assets/image-3.png)
 
 At the top of each category page you will see this 'Add Product' button where you will be able to add you desired item(s).
 
-![Alt text](image-4.png)
+![Alt text](/public/assets/image-4.png)
 
 The collections tab will take you to this page of 'seasonal' collections where you can shop for your season of choice!
-![Alt text](image-7.png)
+![Alt text](/public/assets/image-7.png)
 
 ## Contributors
 
