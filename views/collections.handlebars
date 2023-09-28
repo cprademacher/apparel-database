@@ -1,6 +1,9 @@
 {{#each collections as |collection|}}
- <a href="api/tags/{{id}}" > <section class="card">
-    <h3>{{tag_name}}</h3>
-    <image src="/assets/{{id}}.jpeg" alt="{{tag_name}}"></image>
-  </section></a>
+  <a href="api/tags/{{id}}">
+    <section class="card collections-page">
+      <div class="collections-card">
+        <h3>{{tag_name}}</h3>
+        <image src="/assets/{{id}}.jpeg" alt="{{tag_name}}"></image>
+      </div>
+    </section></a>
 {{/each}}

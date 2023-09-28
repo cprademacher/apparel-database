@@ -56,6 +56,16 @@ body {
 main {
   display: block;
 }
+
+button {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 /*Removes the border on images inside link in IE 10*/
 img {
   border-style: none;
@@ -137,8 +147,8 @@ body {
   min-width: 100vw;
 }
 
-.sign-up-form,
-.login-form {
+.sign-up,
+.login {
   background-color: gray;
   opacity: 0.8;
   width: 40%;
@@ -254,11 +264,136 @@ body {
 }
 
 .new-product-form {
- text-align: center;
+  text-align: center;
 }
 
 .new-product-form button {
   width: 80px;
   height: 30px;
   margin: 10px;
+}
+
+.product-page {
+  background-color: lightgray;
+  width: 50%;
+  height: auto;
+  margin: 80px auto 0 auto;
+}
+
+.product-page header {
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.product-page img {
+  object-fit: fill;
+}
+
+.product-page-buttons {
+  width: 100%;
+  text-align: center;
+}
+
+.product-page button {
+  width: 90px;
+  height: 45px;
+  margin: 5px;
+}
+
+.update-button {
+  background-color: yellow;
+}
+
+.update-product-button {
+  width: 90px;
+  height: 45px;
+  background-color: green;
+}
+
+.delete-button {
+  background-color: red;
+}
+
+.product-page-form {
+  width: 50%;
+  background-color: lightgray;
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+
+.update-product-button {
+  margin-left: 25%;
+}
+
+#update-product-form {
+  width: 200px;
+  align-items: start;
+  margin: 0 auto;
+}
+
+.update-product-form div {
+  padding-top: 15px;
+}
+
+.update-product-form div input {
+  height: 30px;
+}
+
+.collections-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.collections-card {
+  background-color: gray;
+  width: 55%;
+  height: auto;
+  margin: 5px;
+  padding: 10px;
+}
+
+.collections-card h3 {
+  font-size: 1.8vw;
+}
+
+.collections-card img {
+  width: 60%;
+  height: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .product-card {
+    margin: 10px;
+    height: 370px;
+    width: 300px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  .product-card img {
+    width: auto;
+    max-height: 150px;
+  }
+
+  .product_name {
+    margin-left: 0;
+  }
+
+  .product-card-body {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .update-product-form div input {
+    height: 20px;
+    width: 80%;
+  }
 }
