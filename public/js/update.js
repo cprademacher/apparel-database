@@ -23,15 +23,21 @@ function showForm(categoryId, productId) {
     const updatedProductPrice = document.querySelector(
       ".update-product-price"
     ).value;
-    const updatedProductUrl = "/assets/" + fileInput.files[0].name;
-    const updatedProductImage = fileInput.files[0];
-    const formData = new FormData();
+    let updatedProductUrl = "";
+    let updatedProductImage = "";
 
-    formData.append("mypic", updatedProductImage);
+    if (fileInput.files[0]) {
+      updatedProductUrl = "/assets/" + fileInput.files[0].name;
+       updatedProductImage = fileInput.files[0];
+    }
+    const formData = new FormData();
+    if (fileInput.files[0]) {
+      formData.append("url", updatedProductUrl);
+      formData.append("mypic", updatedProductImage);
+    }
     formData.append("product_name", updatedProductName);
     formData.append("stock", updatedProductStock);
     formData.append("price", updatedProductPrice);
-    formData.append("url", updatedProductUrl);
     formData.append("category_id", categoryId);
     formData.append("category_id", productId);
 
